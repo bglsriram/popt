@@ -160,7 +160,7 @@ def read_arguments():
     p.add_argument('--version', '-v', action='version', help='Print version', version=get_version())
     args = p.parse_args()
 
-    print(in_plain_text(args.filename, skip_timestamps=args.skip_timestamps, width=args.width))
+    print(in_plain_text(args.filename, skip_timestamps=args.skip_timestamps, width=args.width)).encode('utf-8'))
 
 
 if __name__ == '__main__':
